@@ -29,7 +29,12 @@ _Include the name of the function, its parameters, return value, and side effect
 
 ```python
 # EXAMPLE
-
+def birthday_checker():
+    #one parameter i.e str
+    #convert str to a date
+    #calculate age by comapring to current date
+    #compare age
+    # return a string as a msg to user as access granted or not
 
 ```
 ## 3. Create Examples as Tests
@@ -38,8 +43,21 @@ _Make a list of examples of what the function will take and return._
 
 ```python
 # EXAMPLE
+"""
+check when the date of birth is given in a correct str format
 
+"""
+test_birthday_checker_valid_format():
+    result = birthday_checker("1960-10-21")
+    assert result == True 
 
+"""
+checking that an underage user is denied entry
+"""
+
+test_birthday_checker_valid_format():
+    result = birthday_checker("2020-11-21")
+    assert result == "Access denied, you are 3 years old. Access age is 16."
 ```
 _Encode each example as a test. You can add to the above list as you go._
 
